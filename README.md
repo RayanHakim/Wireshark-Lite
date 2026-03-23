@@ -1,7 +1,3 @@
-Tentu, Rayan! Ini adalah isi file README.md yang lengkap, profesional, dan sudah dioptimalkan agar profil GitHub kamu terlihat seperti seorang Cybersecurity Engineer yang paham teknis.
-
-Kamu bisa langsung copy-paste seluruh teks di bawah ini ke dalam file bernama README.md di folder proyekmu:
-
 📡 Wireshark Lite: Network Packet Sniffer Pro
 Wireshark Lite adalah aplikasi pemantau jaringan (Network Monitoring) berbasis Python yang dirancang untuk menangkap, membedah, dan menganalisis paket data secara real-time. Proyek ini mendemonstrasikan implementasi Raw Sockets, Multithreading, dan Deep Packet Inspection (DPI) dalam lingkungan simulasi keamanan.
 
