@@ -16,7 +16,7 @@ Cara Baca Hasilnya:
 
 Cari baris yang namanya Wi-Fi.
 
-Jika Disabled: Pintu tertutup (HP orang tua bakal Offline kalau kamu monitor).
+Jika Disabled: Pintu tertutup (HP orang bakal Offline kalau kamu monitor).
 
 Jika Enabled: Pintu terbuka (Internet akan lancar lewat laptopmu).
 
