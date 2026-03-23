@@ -1,6 +1,50 @@
 📡 Wireshark Lite: Network Packet Sniffer Pro
 Wireshark Lite adalah aplikasi pemantau jaringan (Network Monitoring) berbasis Python yang dirancang untuk menangkap, membedah, dan menganalisis paket data secara real-time. Proyek ini mendemonstrasikan implementasi Raw Sockets, Multithreading, dan Deep Packet Inspection (DPI) dalam lingkungan simulasi keamanan.
 
+1. Cara Cek Status (Apakah "Pintu" Terbuka?)
+Sebelum mengubah apa pun, sebaiknya cek dulu status koneksi Wi-Fi kamu saat ini.
+
+Klik Start, ketik PowerShell.
+
+Klik kanan pada PowerShell, lalu pilih Run as Administrator (Wajib!).
+
+Ketik perintah ini dan tekan Enter:
+
+PowerShell
+Get-NetIPInterface | select InterfaceAlias, Forwarding
+Cara Baca Hasilnya:
+
+Cari baris yang namanya Wi-Fi.
+
+Jika Disabled: Pintu tertutup (HP orang tua bakal Offline kalau kamu monitor).
+
+Jika Enabled: Pintu terbuka (Internet akan lancar lewat laptopmu).
+
+2. Cara Aktivasi (Buka "Pintu" Jaringan)
+Gunakan ini HANYA saat kamu ingin menjalankan aplikasi Wireshark Lite untuk memantau perangkat lain.
+
+Di jendela PowerShell yang sama (Admin), ketik:
+
+PowerShell
+Set-NetIPInterface -Forwarding Enabled
+Tekan Enter. (Biasanya tidak muncul tulisan apa-apa jika berhasil).
+
+Verifikasi: Ulangi langkah nomor 1 di atas untuk memastikan status Wi-Fi sudah berubah jadi Enabled.
+
+3. Cara Non-Aktivasi (Tutup "Pintu" Demi Keamanan)
+Sangat disarankan melakukan ini setelah kamu selesai menggunakan program, agar laptopmu tidak bisa dimanfaatkan orang asing di jaringan lain.
+
+Di jendela PowerShell (Admin), ketik:
+
+PowerShell
+Set-NetIPInterface -Forwarding Disabled
+Tekan Enter.
+
+Verifikasi: Cek lagi dengan perintah Get-NetIPInterface tadi. Pastikan Wi-Fi kembali ke status Disabled.
+
+💡 Tips Tambahan: Kenapa Harus "Run as Administrator"?
+Jika kamu lupa menjalankan PowerShell sebagai Admin, perintah Set-NetIPInterface akan ditolak dengan pesan "Access Denied". Ini adalah fitur keamanan Windows agar tidak sembarang aplikasi bisa mengubah jalur internet kamu.
+
 ✨ Fitur Unggulan
 🚀 Real-time Sniffing: Menangkap paket IP, TCP, UDP, dan ICMP yang melintas di Network Interface Card (NIC).
 
